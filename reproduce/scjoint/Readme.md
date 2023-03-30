@@ -1,0 +1,3 @@
+1. replace the `config.py` in scjoint using `config.py` in this folder.  
+2. change `DB` in `Config` to: 'db4_control' (CITE-ASAP), 'MCA_subset', 'MCA_OS', 'PBMCMultome', 'HumanFetal_50k', 'HumanFetal_100k', ...
+3. run: `python main.py`
