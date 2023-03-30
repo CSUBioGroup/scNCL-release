@@ -11,7 +11,7 @@ pip install -r requirements.txt
 We use [`faiss`](https://github.com/facebookresearch/faiss) to accelerate kNN computation. Install instructions: [`INSTALL.md`](https://github.com/facebookresearch/faiss/blob/main/INSTALL.md)
 
 ## Datasets
-All datasets used in our paper can be found in [`zenodo`](https://zenodo.org/record/7431624)
+All datasets used in our paper can be found in [`zenodo`]()
 
 Data source:
 
