@@ -12,9 +12,8 @@ cd scNCL-release/`
 `conda create -n scNCL python=3.7.3
 source activate scNCL`
 
-3. install pytorch
+3. install pytorch (our test-version: torch==1.7.1+cu101, cuda: 10.1)
 
-(our test-version: torch==1.7.1+cu101, cuda: 10.1)
 `pip install torch==1.7.1+cu101 -f https://download.pytorch.org/whl/torch_stable.html`
 
 4. install other dependencies
