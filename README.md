@@ -3,21 +3,26 @@ A semi-supervised framework for cross-modal label transfer.
 
 ## Installation
 1. clone repository
+
 `git clone https://github.com/CSUBioGroup/scNCL-release.git
 cd scNCL-release/`
 
 2. create env
+
 `conda create -n scNCL python=3.7.3
 source activate scNCL`
 
 3. install pytorch
+
 (our test-version: torch==1.7.1+cu101, cuda: 10.1)
 `pip install torch==1.7.1+cu101 -f https://download.pytorch.org/whl/torch_stable.html`
 
 4. install other dependencies
+
 `pip install -r requirements.txt`
 
 5. setup
+
 `python setup.py install`
 
 * Note that if reporting `ERROR: Could not find a version that satisfies the requirement nose>=1.0`, please run command:
@@ -37,15 +42,15 @@ PBMC: [`RNA+ATAC`](https://satijalab.org/seurat/articles/atacseq_integration_vig
 CITE-ASAP: [`RNA+ATAC`](https://github.com/SydneyBioX/scJoint)
 
 ## Demo
-We provide a demo to help users test our code: [`PBMC`](./demo/PBMC-demo.ipynb). Data used in the demo is already provided in the [`demo_data`](./demo/demo_data) folder. 
+We provide a demo to help users test our code: [`PBMC`](./Examples/PBMC-demo.ipynb). Data used in the demo is already provided in the [`demo_data`](./Examples/demo_data) folder. 
 
 ## Tutorial
 We provide examples to help reproduce our experiments.
-* 1. [`CITE-ASAP`](./demo/CITE-ASAP.ipynb)
-* 2. [`HFA-subset-50k`](./demo/HFA-subset-50k.ipynb)
-* 3. [`MCA`](./demo/MCA.ipynb)
-* 4. [`MCAOS`](./demo/MCAOS.ipynb)
-* 5. [`MCA-subset`](./demo/MCAsubset.ipynb)
+* 1. [`CITE-ASAP`](./Examples/CITE-ASAP.ipynb)
+* 2. [`HFA-subset-50k`](./Examples/HFA-subset-50k.ipynb)
+* 3. [`MCA`](./Examples/MCA.ipynb)
+* 4. [`MCAOS`](./Examples/MCAOS.ipynb)
+* 5. [`MCA-subset`](./Examples/MCAsubset.ipynb)
 
 ## Usage
 Following is instructions about applying scNCL for new datasets:
