@@ -4,13 +4,15 @@ A semi-supervised framework for cross-modal label transfer.
 ## Installation
 1. clone repository
 
-`git clone https://github.com/CSUBioGroup/scNCL-release.git
-cd scNCL-release/`
+`git clone https://github.com/CSUBioGroup/scNCL-release.git`
+
+`cd scNCL-release/`
 
 2. create env
 
-`conda create -n scNCL python=3.7.3
-source activate scNCL`
+`conda create -n scNCL python=3.7.3`
+
+`source activate scNCL`
 
 3. install pytorch (our test-version: torch==1.7.1+cu101, cuda: 10.1)
 
