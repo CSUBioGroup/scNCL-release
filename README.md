@@ -2,13 +2,26 @@
 A semi-supervised framework for cross-modal label transfer. 
 
 ## Installation
+1. clone repository
+`git clone https://github.com/CSUBioGroup/scNCL-release.git
+cd scNCL-release/`
 
-Ensure Pytorch is installed in your python environment (our test version: 1.7.1 and 1.12.0). Then installing the basic dependencies:
-```
-pip install -r requirements.txt
-```
+2. create env
+`conda create -n scNCL python=3.7.3
+source activate scNCL`
 
-We use [`faiss`](https://github.com/facebookresearch/faiss) to accelerate kNN computation. Install instructions: [`INSTALL.md`](https://github.com/facebookresearch/faiss/blob/main/INSTALL.md)
+3. install pytorch
+(our test-version: torch==1.7.1+cu101, cuda: 10.1)
+`pip install torch==1.7.1+cu101 -f https://download.pytorch.org/whl/torch_stable.html`
+
+4. install other dependencies
+`pip install -r requirements.txt`
+
+5. setup
+`python setup.py install`
+
+* Note that if reporting `ERROR: Could not find a version that satisfies the requirement nose>=1.0`, please run command:
+`conda install nose`
 
 ## Datasets
 All datasets used in our paper can be found in [`zenodo`](https://zenodo.org/record/7787402)
@@ -23,14 +36,16 @@ PBMC: [`RNA+ATAC`](https://satijalab.org/seurat/articles/atacseq_integration_vig
 
 CITE-ASAP: [`RNA+ATAC`](https://github.com/SydneyBioX/scJoint)
 
+## Demo
+We provide a demo to help users test our code: [`PBMC`](./demo/PBMC-demo.ipynb). Data used in the demo is already provided in the [`demo_data`](./demo/demo_data) folder. 
+
 ## Tutorial
-We provide multiple demos to help reproduce our experiments.
+We provide examples to help reproduce our experiments.
 * 1. [`CITE-ASAP`](./demo/CITE-ASAP.ipynb)
 * 2. [`HFA-subset-50k`](./demo/HFA-subset-50k.ipynb)
 * 3. [`MCA`](./demo/MCA.ipynb)
 * 4. [`MCAOS`](./demo/MCAOS.ipynb)
 * 5. [`MCA-subset`](./demo/MCAsubset.ipynb)
-* 6. [`PBMC`](./demo/PBMC.ipynb)
 
 ## Usage
 Following is instructions about applying scNCL for new datasets:
@@ -44,7 +59,7 @@ adata_atac   = sc.read_h5ad('data/MCA/scjoint/data_subset/adata_atac.h5ad')  # s
 # please refer to Seurat's tutorial (https://satijalab.org/seurat/articles/atacseq_integration_vignette.html)
 atac_raw_emb = np.load('data/MCA/scjoint/data_subset/atac_raw_emb.npy')     # pca matrix or tSNE coordinates
 
-model = scNCL.scNCL(
+model = BuildscNCL(
                 'non_linear', n_latent=64, bn=False, dr=0.2, 
                 cont_w=0.05, cont_tau=0.4,
         )
