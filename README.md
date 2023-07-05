@@ -30,7 +30,7 @@ A semi-supervised framework for cross-modal label transfer.
 `conda install nose`
 
 ## Datasets
-All datasets used in our paper can be found in [`zenodo`](https://zenodo.org/record/8093359)
+All datasets used in our paper can be found in [`zenodo`](https://zenodo.org/record/8116087)
 
 Data source:
 
